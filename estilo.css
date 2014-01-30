@@ -1,0 +1,43 @@
+body{
+	background:silver;
+	font-size:20px;
+	font-family:helvetica;
+}
+
+section {
+	
+	background:darkred;
+	color:white;
+	width:50%;
+	height:auto;
+	margin:20px auto;
+	padding: 5px;
+	text-align:center;
+	text-shadow:0px 0px 2px black;
+	-webkit-transition:all 0.5s;
+	overflow: hidden;
+	position:relative;	
+}
+
+
+
+section article{
+	background:green;
+	border-radius:5px;
+	display:inline-block;
+	margin:10px;
+	width:45%;
+	height:300px;
+
+}
+
+
+@-webkit-keyframes nombre{
+	from{
+		background:red;
+	}
+	to{
+		background:darkred;
+	}
+
+}
