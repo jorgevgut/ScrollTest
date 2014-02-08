@@ -1,43 +1,80 @@
-body{
-	background:silver;
-	font-size:20px;
-	font-family:helvetica;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-
+body {
+  background: #c0c0c0;
+  font-size: 20px;
+  font-family: helvetica;
+}
 section {
-	
-	background:darkred;
-	color:white;
-	width:50%;
-	height:auto;
-	margin:20px auto;
-	padding: 5px;
-	text-align:center;
-	text-shadow:0px 0px 2px black;
-	-webkit-transition:all 0.5s;
-	overflow: hidden;
-	position:relative;	
+/*
+	background-image -webkit-linear-gradient(rgba(0,0,0,0.0) 296px,blue 124px)
+	background-size 100% 300px
+	background-repeat repeat
+	background-position 20px 171px
+	*/
+  color: #fff;
+  text-shadow: 0px 0px 15px #000;
+  padding: 5px;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  width: 60%;
 }
-
-
-
-section article{
-	background:green;
-	border-radius:5px;
-	display:inline-block;
-	margin:10px;
-	width:45%;
-	height:300px;
-
+section article {
+  background: #333;
+  border: 1px solid rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+  width: 45%;
+  height: 320px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  position: relative;
+  opacity: 0;
 }
+section article:hover {
+  background: #8b0000;
+  cursor: pointer;
+  background: #8b0000;
+  height: 370px;
+}
+section article:nth-child(1),
+article:nth-child(2),
+article:nth-child(3),
+article:nth-child(4) {
+  -webkit-animation: none;
+  opacity: 1;
+}
+section article:nth-child(odd) {
+  top: -25px;
+  -webkit-transform-origin: 100% 0%;
+}
+section article:nth-child(even) {
+  -webkit-transform-origin: 0% 100%;
+}
+@-webkit-keyframes par {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(-25deg);
+  }
 
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Impar {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(25deg);
+  }
 
-@-webkit-keyframes nombre{
-	from{
-		background:red;
-	}
-	to{
-		background:darkred;
-	}
-
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+    opacity: 1;
+  }
 }
